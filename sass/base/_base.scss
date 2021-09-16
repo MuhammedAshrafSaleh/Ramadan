@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #1ebe75;
+    --secondary-color: #0b1118;
+    --gohst-color: #1e221e;
+    --white: #fff;
+    --simple-green: #f4edbe;
+    --yellow: #f2e372;
+    --orange: #f29846;
+    --purble: #0494fc;
+    --dark-blue: #203046;
+    --dark-sky: #2b64f7;
+    --simple-sky: #33a9fc;
+    --simple-black: #172331;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+button:focus,
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+p {
+    font-family: "Almarai", sans-serif;
+}
+html {
+    background-color: rgba(0, 0, 0, 0.97);
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 62.5%;
+
+    @include responsive(bigDesktop) {
+        font-size: 75%;
+    }
+
+    @include responsive(tabLand) {
+        font-size: 56.25%;
+    }
+
+    @include responsive(tab) {
+        font-size: 50%;
+    }
+
+    @include responsive(phone) {
+        font-size: 50%;
+    }
+
+    @include responsive(smallphone) {
+        font-size: 50%;
+    }
+}
+
+.ramadan {
+    width: 90%;
+    margin: 2rem auto;
+    margin-bottom: 5rem;
+    background-color: var(--secondary-color);
+    box-shadow: rgba(0, 0, 0, 0.25) 1rem 1rem 1rem;
+    display: grid;
+    grid-template-rows: calc(100vh - 10rem) repeat(5, minmax(100vh, max-content));
+}
+
+::-webkit-scrollbar {
+    background-color: rgba(225, 225, 225, 0.1);
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+}
+
+a:focus,
+a:link {
+    text-decoration: none !important;
+    outline: none;
+}
+
+ul {
+    list-style: none !important;
+}
